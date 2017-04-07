@@ -6,7 +6,8 @@ function Pizza(size, toppings) {
 }//close constructor
 //price prototype, to be updated
 Pizza.prototype.price = function() {
-  price = 0;
+  price = 10;
+  price += this.size;
   this.toppings.forEach(function(topping) {
     price += topping;
   })
@@ -19,9 +20,9 @@ toppings = [];
 $(function () {
   $("form").submit(function(event) {
     event.preventDefault();
-    var size = parseInt($("#size").val());
+    var size = parseFloat($("#size").val());
     $("input:checkbox[name='toppings']:checked").each(function(){
-      toppings.push(parseInt($(this).val()));
+      toppings.push(parseFloat($(this).val()));
     });
     var newPizza = new Pizza(size, toppings)
     console.log(newPizza);
