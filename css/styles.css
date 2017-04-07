@@ -4,10 +4,7 @@ body {
   background-attachment: fixed;
   background-position: center;
 }
-
 h1 {
-  color: black;
-  text-shadow: 0px 0px 10px white;
   text-align: center;
   margin: 20px;
 }
@@ -22,9 +19,10 @@ form {
   color: white;
   display: none;
 }
-select {
-  color: red;
+.blackWhite {
+  color: black;
+  text-shadow: 0px 0px 10px white;
 }
-.red {
-  background-color: red;
+ul {
+  list-style-type: none;
 }

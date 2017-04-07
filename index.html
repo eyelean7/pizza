@@ -9,11 +9,9 @@
 </head>
 <body>
   <div class="container">
-    <h1>We're thinking pizza...</h1>
+    <h1 class="blackWhite">We're thinking pizza...</h1>
     <div class="row">
-      <div class="col-md-3">
-        <ul id="pizzaList"></ul>
-      </div>
+      <div class="col-md-3"></div>
       <div class="col-md-6">
         <form id="myForm">
           <h3>Select size</h3>
@@ -46,7 +44,10 @@
           <p>We are preparing your <span id="sizeOutput"></span> pizza with toppings <span id="toppings"></span>. Your total is $<span id="price"></span>.</p>
         </div>
       </div>
-      <div class="col-md-3"></div>
+      <div class="col-md-3">
+        <h3 class="blackWhite">Your order:</h3>
+        <ul id="pizzaList" class="blackWhite"></ul>
+      </div>
     </div>
   </div>
 </body>
