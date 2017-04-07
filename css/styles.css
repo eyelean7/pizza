@@ -19,3 +19,6 @@ form {
   color: white;
   display: none;
 }
+select {
+  color: red;
+}

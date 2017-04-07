@@ -17,31 +17,31 @@
           <h3>Select size</h3>
           <!-- dropdown menu -->
           <select class="form-control" id="size">
-            <option value="1"><span class="name">Personal</span></option>
-            <option value="1.5"><span class="name">Small</span></option>
-            <option value="2"><span class="name">Medium</span></option>
-            <option value="3"><span class="name">Party</span></option>
-            <option value="5"><span class="name">Chicago-Style Deep Dish</span></option>
+            <option value=".75,personal">Personal</option>
+            <option value="1.5,small">Small</option>
+            <option value="2,medium">Medium</option>
+            <option value="3,party">Party</option>
+            <option value="5,Chicago-style deep dish">Chicago-Style Deep Dish</option>
           </select>
           <h3>Select toppings</h3>
           <!-- checkbox -->
           <div class="form-group">
-            <input type="checkbox" name="toppings" value="2"><span class="word">Pepperoni</span><br>
-            <input type="checkbox" name="toppings" value="2"><span class="word">Sausage</span><br>
-            <input type="checkbox" name="toppings" value="2"><span class="word">Ham</span><br>
-            <input type="checkbox" name="toppings" value="1"><span class="word">Mushroom</span><br>
-            <input type="checkbox" name="toppings" value="1"><span class="word">Spinach</span><br>
-            <input type="checkbox" name="toppings" value="1"><span class="word">Diced Tomato</span><br>
-            <input type="checkbox" name="toppings" value="1"><span class="word">Olive</span><br>
-            <input type="checkbox" name="toppings" value="1"><span class="word">Banana Pepper</span><br>
-            <input type="checkbox" name="toppings" value="1.5"><span class="word">Extra Cheese</span><br>
+            <input type="checkbox" name="toppings" value="2,pepperoni">Pepperoni<br>
+            <input type="checkbox" name="toppings" value="2,sausage">Sausage<br>
+            <input type="checkbox" name="toppings" value="2,ham">Ham<br>
+            <input type="checkbox" name="toppings" value="1,mushroom">Mushroom<br>
+            <input type="checkbox" name="toppings" value="1,spinach">Spinach<br>
+            <input type="checkbox" name="toppings" value="1,diced tomato">Diced Tomato<br>
+            <input type="checkbox" name="toppings" value="1,olive">Olive<br>
+            <input type="checkbox" name="toppings" value="1,banana pepper">Banana Pepper<br>
+            <input type="checkbox" name="toppings" value="1.5,extra cheese">Extra Cheese<br>
           </div>
           <button class="btn btn-primary">Add another pizza</button>
           <button type="submit" class="btn btn-danger">Place Order</button>
         </form>
         <div id="receipt">
           <h2>Thank you for your purchase!</h2>
-          <p>We are preparing your <span id="sizeOutput"></span> pizza, with toppings <span id="toppings"></span>. Your total is $<span id="price"></span>.</p>
+          <p>We are preparing your <span id="sizeOutput"></span> pizza with toppings <span id="toppings"></span>. Your total is $<span id="price"></span>.</p>
         </div>
       </div>
       <div class="col-md-3"></div>
