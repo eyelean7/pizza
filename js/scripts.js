@@ -6,17 +6,25 @@ function Pizza(size, toppings) {
 }//close constructor
 //price prototype, to be updated
 Pizza.prototype.price = function() {
+  price = 0;
+  this.toppings.forEach(function(topping) {
+    price += topping;
+  })
+  console.log(price);
   return "Price" + size + toppings;
-}//end prototype
+}
+//end prototype
+toppings = [];
 //UI
 $(function () {
   $("form").submit(function(event) {
     event.preventDefault();
-    var size = $("#size").val();
-    console.log(size);
+    var size = parseInt($("#size").val());
     $("input:checkbox[name='toppings']:checked").each(function(){
-      var toppings = $(this).val();
-      console.log(toppings);
+      toppings.push(parseInt($(this).val()));
     });
+    var newPizza = new Pizza(size, toppings)
+    console.log(newPizza);
+    newPizza.price()
   });
 });
