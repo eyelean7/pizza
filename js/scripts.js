@@ -1,4 +1,5 @@
 //back-end
+var numberOfPizzas = 0;
 //constructor
 function Pizza(size, toppings) {
   this.size=size;
@@ -39,7 +40,8 @@ function addPizza() {
   var newPizza = new Pizza(size, toppings)
   // run price prototype
   newPizza.price();
-  $("#pizzaList").append("<li>" + sizeText + " " + toppingsList + "</li>");
+  $("#pizzaList").append("<li>" + sizeText + ": " + toppingsList.join(", ") + "</li>");
+  numberOfPizzas += 1;
 }
 
 //UI
@@ -51,12 +53,12 @@ $(function () {
   });
   $("#myForm").submit(function(event) {
     event.preventDefault();
-    addPizza();
     // update receipt
-    $("#sizeOutput").text(sizeText);
-    $("#toppings").text(toppingsList);
     $("#price").text(total.toFixed(2));
     $("form").hide();
     $("#receipt").show();
+    if (numberOfPizzas > 1) {
+      $("#plural").text("s");
+    }
   });
 });
