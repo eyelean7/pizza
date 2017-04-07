@@ -4,7 +4,10 @@ body {
   background-attachment: fixed;
   background-position: center;
 }
+
 h1 {
+  color: black;
+  text-shadow: 0px 0px 10px white;
   text-align: center;
   margin: 20px;
 }
@@ -21,4 +24,7 @@ form {
 }
 select {
   color: red;
+}
+.red {
+  background-color: red;
 }

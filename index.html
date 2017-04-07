@@ -11,9 +11,11 @@
   <div class="container">
     <h1>We're thinking pizza...</h1>
     <div class="row">
-      <div class="col-md-3"></div>
+      <div class="col-md-3">
+        <ul id="pizzaList"></ul>
+      </div>
       <div class="col-md-6">
-        <form>
+        <form id="myForm">
           <h3>Select size</h3>
           <!-- dropdown menu -->
           <select class="form-control" id="size">
@@ -26,15 +28,15 @@
           <h3>Select toppings</h3>
           <!-- checkbox -->
           <div class="form-group">
-            <input type="checkbox" name="toppings" value="2,pepperoni">Pepperoni<br>
-            <input type="checkbox" name="toppings" value="2,sausage">Sausage<br>
-            <input type="checkbox" name="toppings" value="2,ham">Ham<br>
-            <input type="checkbox" name="toppings" value="1,mushroom">Mushroom<br>
-            <input type="checkbox" name="toppings" value="1,spinach">Spinach<br>
-            <input type="checkbox" name="toppings" value="1,diced tomato">Diced Tomato<br>
-            <input type="checkbox" name="toppings" value="1,olive">Olive<br>
-            <input type="checkbox" name="toppings" value="1,banana pepper">Banana Pepper<br>
-            <input type="checkbox" name="toppings" value="1.5,extra cheese">Extra Cheese<br>
+            <input type="checkbox" name="toppings" value="2,pepperoni"><span class=word>Pepperoni</span><br>
+            <input type="checkbox" name="toppings" value="2,sausage"><span class="word">Sausage</span><br>
+            <input type="checkbox" name="toppings" value="2,ham"><span class="word">Ham</span><br>
+            <input type="checkbox" name="toppings" value="1,mushroom"><span class="word">Mushroom</span><br>
+            <input type="checkbox" name="toppings" value="1,spinach"><span class="word">Spinach</span><br>
+            <input type="checkbox" name="toppings" value="1,diced tomato"><span class="word">Diced Tomato</span><br>
+            <input type="checkbox" name="toppings" value="1,olive"><span class="word">Olive</span><br>
+            <input type="checkbox" name="toppings" value="1,banana pepper"><span class="word">Banana Pepper</span><br>
+            <input type="checkbox" name="toppings" value="1.5,extra cheese"><span class="word">Extra Cheese</span><br>
           </div>
           <button class="btn btn-primary">Add another pizza</button>
           <button type="submit" class="btn btn-danger">Place Order</button>
