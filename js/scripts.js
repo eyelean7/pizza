@@ -8,13 +8,13 @@ function Pizza(size, toppings) {
 //price prototype
 var total = 0;
 Pizza.prototype.price = function() {
-  console.log(total);
-  price = 1;
+  toppingPrice = 1;
+  price = 5;
   this.toppings.forEach(function(topping) {
-    price += topping;
-  })
-  price*=(this.size/2);
-  price += 10;
+    toppingPrice += topping;
+  });
+  price+=(toppingPrice*this.size);
+  price-=(this.toppings.length*.25);
   price*=1.07;
   total += price;
   console.log(total);
@@ -42,14 +42,14 @@ function addPizza() {
   toppings = [];
   toppingsList = ["no toppings"];
   // determine size and toppings from user input
-  sizeText = $("#size").val().split(",")[1];
-  size = parseFloat($("#size").val());
+  sizeText = $("#size").val().split(",")[1];//e.g. small, medium
+  size = parseFloat($("#size").val());//to determine price
   valToppings();
   $("input:checkbox[name='toppings']:checked").each(function(){
-    toppingsList.push($(this).val().split(",")[1]);
+    toppingsList.push($(this).val().split(",")[1]);//name of toppings
   });
   $("input:checkbox[name='toppings']:checked").each(function(){
-    toppings.push(parseFloat($(this).val()));
+    toppings.push(parseFloat($(this).val()));//to determine price
   });
   // create Pizza instance
   var newPizza = new Pizza(size, toppings)
