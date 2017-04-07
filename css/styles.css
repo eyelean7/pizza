@@ -12,6 +12,9 @@ form {
   padding: 10% 0;
   color: lightgrey;
 }
+#userInfo {
+  display:none;
+}
 .word {
   padding-left: 5px;
 }
@@ -23,8 +26,12 @@ form {
   color: black;
   text-shadow: 0px 0px 10px white;
 }
-#numberOfPizzas {
-  display: none;
+.whiteBlack {
+  color: white;
+  text-shadow: 0px 0px 10px black;
+}
+#output {
+  display:none;
 }
 ol {
   list-style-type: none;

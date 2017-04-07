@@ -64,23 +64,28 @@ $(function () {
   $(".btn-primary").click(function(event) {
     event.preventDefault();
     addPizza();
-    document.getElementById("myForm").reset();
+    document.getElementById("orderForm").reset();
   });
-  $("#myForm").submit(function(event) {
+  $("#orderForm").submit(function(event) {
     event.preventDefault();
     // update receipt
     if (numberOfPizzas < 1) {
       alert("Please add at least one pizza to your order.")
     }
     else {
-      $("#numberOfPizzas").text(numberOfPizzas);
-      $("#numberOfPizzas").show();
-      $("#price").text(total.toFixed(2));
-      $("form").hide();
-      $("#receipt").show();
-      if (numberOfPizzas > 1) {
-        $(".plural").text("s");
-      }
+      $("#orderForm").hide();
+      $("#userInfo").show();
+      $("#userInfo").submit(function(event) {
+        event.preventDefault();
+          $("#numberOfPizzas").text(numberOfPizzas);
+          $("#output").show();
+          $("#price").text(total.toFixed(2));
+          $("form").hide();
+          $("#receipt").show();
+          if (numberOfPizzas > 1) {
+            $(".plural").text("s");
+          }
+      });
     }
   });
 });
