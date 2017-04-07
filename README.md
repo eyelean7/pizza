@@ -21,6 +21,7 @@ _This is a fake pizza ordering site. The user may select the size and toppings f
 
 * _Clone repository_
 * _Open in Google Chrome_
+* _View in [gh-pages](https://eyelean7.github.io/pizza/)_
 
 ## Support and contact details
 
