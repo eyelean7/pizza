@@ -59,6 +59,7 @@ function addPizza() {
   numberOfPizzas += 1;
 }
 
+
 //UI
 $(function () {
   $(".btn-primary").click(function(event) {
@@ -85,6 +86,16 @@ $(function () {
           if (numberOfPizzas > 1) {
             $(".plural").text("s");
           }
+          var address1 = $("#address1").val();
+          var address2 = $("#address2").val();
+          var city = $("#city").val();
+          var state = $("#state").val();
+          var zip = $("#zip").val();
+          $(".address1").text(address1);
+          $(".address2").text(address2);
+          $(".city").text(city);
+          $(".state").text(state);
+          $(".zip").text(zip);
       });
     }
   });
