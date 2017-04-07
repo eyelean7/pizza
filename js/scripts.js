@@ -55,7 +55,7 @@ function addPizza() {
   var newPizza = new Pizza(size, toppings)
   // run price prototype
   newPizza.price();
-  $("#pizzaList").append("<li>" + sizeText + ": " + toppingsList.join(", ") + "</li>");
+  $("#pizzaList").append("<li>" + sizeText + ": " + toppingsList.join(", ") + "</li><br>");
   numberOfPizzas += 1;
 }
 
@@ -73,11 +73,13 @@ $(function () {
       alert("Please add at least one pizza to your order.")
     }
     else {
+      $("#numberOfPizzas").text(numberOfPizzas);
+      $("#numberOfPizzas").show();
       $("#price").text(total.toFixed(2));
       $("form").hide();
       $("#receipt").show();
       if (numberOfPizzas > 1) {
-        $("#plural").text("s");
+        $(".plural").text("s");
       }
     }
   });
