@@ -3,6 +3,10 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+.row {
+  margin-top: 20px;
 }
 h1 {
   text-align: center;
@@ -33,6 +37,9 @@ form {
 #output {
   display:none;
 }
-ol {
+.col-md-3 {
+  margin-top: 5%;
+}
+#pizzaList {
   list-style-type: none;
 }
